@@ -1,0 +1,1 @@
+shopt -s dotglob extglob && unzip -o "machine-api-project.zip" "machine-api-project/*" -d /tmp/wh && mv /tmp/wh/machine-api-project/* . && rm -rf /tmp/wh && git add . && git commit -m "Add machine-api-project from zip" && git push

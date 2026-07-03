@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Machine API — Web Helper Ultra Modern</title>
+<meta name="description" content="Downloader, pencarian, shortlink, AI chat, image generator, dan lebih banyak lagi." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>" />
+<link rel="stylesheet" href="/assets/css/style.css" />
+<script>
+  (function () {
+    var saved = localStorage.getItem("machineapi_theme") || "system";
+    var dark = saved === "dark" || (saved === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+  })();
+
+  document.addEventListener("keydown", function (e) {
+    var blocked = e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+      (e.ctrlKey && e.key === "U");
+    if (blocked) e.preventDefault();
+  });
+</script>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+<div class="app-shell">
+  <div class="topbar" id="topbar"></div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <nav class="sidebar" id="sidebar"></nav>
+  <main class="content" id="app-content"></main>
+  <footer class="site-footer" data-i18n="footer_text">Dibuat dengan ❤️ oleh XYCoolcraft</footer>
+</div>
+
+<script src="/assets/js/i18n.js" defer></script>
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/history-store.js" defer></script>
+<script src="/assets/js/utils.js" defer></script>
+<script src="/assets/js/categories.js" defer></script>
+<script src="/assets/js/pages.js" defer></script>
+<script src="/assets/js/downloader.js" defer></script>
+<script src="/assets/js/chat.js" defer></script>
+<script src="/assets/js/app.js" defer></script>
+</body>
+</html>
